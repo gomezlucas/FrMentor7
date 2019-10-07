@@ -23,6 +23,7 @@ UI.prototype.submitForm = function (event) {
 
     console.log(value)
     if (value.indexOf("@") === -1 || value.indexOf('.') === -1 || !value) {
+        input.classList.remove("is-valid")
         input.classList.add("is-invalid")
         feedback.innerHTML = "Please provide a valid email"
         feedbackIcon.innerHTML = `<img src="./images/icon-error.svg"> `
